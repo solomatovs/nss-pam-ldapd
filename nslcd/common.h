@@ -151,15 +151,15 @@ int invalidator_start(void);
 void invalidator_do(enum ldap_map_selector map);
 
 /* common buffer lengths */
-#define BUFLEN_NAME         256  /* user, group names and such */
-#define BUFLEN_SAFENAME     300  /* escaped name */
+#define BUFLEN_NAME        1024  /* user, group names and such */
+#define BUFLEN_SAFENAME    1300  /* escaped name */
 #define BUFLEN_PASSWORD     256  /* passwords */
 #define BUFLEN_PASSWORDHASH 256  /* passwords hashes */
-#define BUFLEN_DN           512  /* distinguished names */
-#define BUFLEN_SAFEDN       600  /* escaped dn */
+#define BUFLEN_DN          4096  /* distinguished names */
+#define BUFLEN_SAFEDN      4352  /* escaped dn */
 #define BUFLEN_FILTER      4096  /* search filters */
-#define BUFLEN_HOSTNAME     256  /* host names or FQDN (and safe version) */
-#define BUFLEN_MESSAGE     1024  /* message strings */
+#define BUFLEN_HOSTNAME     512  /* host names or FQDN (and safe version) */
+#define BUFLEN_MESSAGE     2048  /* message strings */
 
 /* provide strtouid() function alias */
 #if SIZEOF_UID_T == SIZEOF_UNSIGNED_LONG_INT
